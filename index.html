@@ -1,0 +1,234 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>PSU | Patliputra Students Union</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Outfit:wght@300;400;600;900&display=swap');
+
+        :root {
+            --color-1: #C5FDD3; 
+            --color-2: #94E1B4;
+            --color-3: #69C5A0;
+            --color-4: #45A994; 
+            --color-5: #288D8A;
+            --color-6: #126171;
+            --color-7: #033854; 
+        }
+
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: var(--color-7);
+            color: white;
+            font-family: 'Outfit', sans-serif;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        .sigma-font { font-family: 'Syncopate', sans-serif; }
+
+        /* Animations - No Zoom */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* 7-Color Gradient Animation */
+        .special-text {
+            background: linear-gradient(90deg, var(--color-1), var(--color-2), var(--color-4), var(--color-1));
+            background-size: 300% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: flow 8s linear infinite;
+        }
+
+        @keyframes flow {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+
+        /* CO-FOUNDER CARD */
+        .master-card {
+            background: linear-gradient(135deg, var(--color-6), var(--color-7));
+            border: 1px solid var(--color-4);
+            padding: 2.5rem 1.5rem;
+            position: relative;
+            border-radius: 12px;
+        }
+
+        /* PRESIDENT & VP GLOW EFFECT */
+        .exec-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(148, 225, 180, 0.2);
+            padding: 2rem 1.5rem;
+            text-align: center;
+            border-radius: 12px;
+            position: relative;
+            box-shadow: 0 0 15px rgba(69, 169, 148, 0.1);
+            animation: subtleGlow 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes subtleGlow {
+            from { box-shadow: 0 0 5px rgba(148, 221, 180, 0.05); border-color: rgba(148, 225, 180, 0.2); }
+            to { box-shadow: 0 0 25px rgba(148, 221, 180, 0.2); border-color: rgba(148, 225, 180, 0.5); }
+        }
+
+        /* GRID FOR 45 STUDENTS - SPACIOUS DESIGN */
+        .member-box {
+            background: rgba(18, 97, 113, 0.2);
+            border: 1px solid rgba(197, 253, 211, 0.1);
+            padding: 24px 10px; /* Increased vertical space */
+            text-align: center;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .member-box:hover {
+            background: rgba(197, 253, 211, 0.1);
+            border-color: var(--color-2);
+        }
+
+        .hero-title {
+            font-size: clamp(2.2rem, 11vw, 4.5rem);
+            line-height: 1;
+            letter-spacing: -1px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Nav -->
+    <nav class="w-full py-6 px-6 flex justify-between items-center border-b border-white/5">
+        <div class="sigma-font text-[10px] font-bold tracking-widest text-emerald-300">PSU</div>
+        <div class="text-[8px] sigma-font opacity-40 uppercase tracking-[0.4em]">Registry 2024</div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="min-h-[70vh] flex flex-col items-center justify-center px-6 text-center">
+        <div class="reveal active">
+            <p class="sigma-font text-[9px] tracking-[0.5em] text-emerald-200 mb-6 uppercase">The Student Brotherhood</p>
+            <h1 class="sigma-font hero-title font-bold mb-8">
+                PATLIPUTRA <br> <span class="special-text uppercase">Students</span> <br> UNION
+            </h1>
+            <p class="max-w-xs mx-auto text-slate-400 text-xs leading-relaxed mb-10">
+                45 individuals. One destination. Patna. <br>Built on silent discipline and shared victory.
+            </p>
+        </div>
+    </section>
+
+    <!-- Mission -->
+    <section class="py-20 px-8 bg-[#022a3f]/50">
+        <div class="max-w-md mx-auto space-y-12">
+            <div class="reveal">
+                <p class="text-xl font-bold leading-tight border-l-2 border-emerald-400 pl-4 mb-2">
+                    "Patna sirf ek city nahi, hum sabke sapno ka Starting Point hai."
+                </p>
+                <p class="text-[8px] sigma-font text-emerald-500 tracking-[0.3em] uppercase">Mindset 01</p>
+            </div>
+            <div class="reveal">
+                <p class="text-xl font-bold leading-tight border-l-2 border-emerald-400 pl-4 mb-2">
+                    "Mehnat itni Silent rakho, ki tumhari success Patna mein shor macha de."
+                </p>
+                <p class="text-[8px] sigma-font text-emerald-500 tracking-[0.3em] uppercase">Mindset 02</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section class="py-24 px-6 bg-[#011b2b]">
+        <div class="max-w-lg mx-auto">
+            <h2 class="sigma-font text-center text-[10px] mb-16 tracking-[0.6em] opacity-40 uppercase">Board of Founders</h2>
+
+            <!-- Unique Co-Founder Card -->
+            <div class="reveal mb-12">
+                <div class="master-card">
+                    <p class="text-[8px] sigma-font tracking-[0.4em] text-emerald-300 mb-4 uppercase">Architect & Co-Founder</p>
+                    <h3 class="sigma-font text-2xl text-white">Shivansh <br> Kashyap</h3>
+                    <div class="mt-8 flex justify-end">
+                        <span class="text-[7px] sigma-font tracking-widest opacity-40 italic">ORIGINATOR</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exec Cards with Glow -->
+            <div class="grid grid-cols-1 gap-6">
+                <div class="reveal exec-card">
+                    <p class="text-[8px] sigma-font tracking-[0.4em] text-emerald-200/50 mb-2 uppercase">President</p>
+                    <h3 class="sigma-font text-xl text-white">Pritam Kumar</h3>
+                </div>
+                <div class="reveal exec-card">
+                    <p class="text-[8px] sigma-font tracking-[0.4em] text-emerald-200/50 mb-2 uppercase">Visipresident</p>
+                    <h3 class="sigma-font text-xl text-white">Om Prakash</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expanded 45 Members Grid -->
+    <section class="py-24 px-4 bg-[#033854]">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <h2 class="sigma-font text-[10px] tracking-widest uppercase mb-2">The Original 45</h2>
+                <p class="text-[8px] opacity-30 uppercase tracking-widest">Foundation Members List</p>
+            </div>
+            
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                <script>
+                    for(let i=1; i<=45; i++){
+                        document.write(`
+                            <div class="reveal member-box">
+                                <p class="text-[9px] opacity-30 mb-2">FOUNDER #${String(i).padStart(2, '0')}</p>
+                                <p class="sigma-font text-[9px] text-emerald-300 tracking-widest">RESERVED</p>
+                                <div class="mt-3 h-[1px] w-4 bg-emerald-500/20 mx-auto"></div>
+                            </div>
+                        `);
+                    }
+                </script>
+            </div>
+            <div class="mt-16 text-center reveal">
+                <p class="text-[9px] sigma-font opacity-20 tracking-[0.3em] uppercase">Roster Data Finalizing Tomorrow</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-40 px-6 text-center border-t border-white/5">
+        <div class="reveal">
+            <p class="text-[8px] sigma-font tracking-[1em] opacity-20 mb-8 uppercase">Project Designed By</p>
+            <h2 class="sigma-font text-4xl font-bold tracking-tighter special-text leading-none">
+                SHIVANSH <br> KASHYAP
+            </h2>
+            <div class="mt-20 flex justify-center items-center space-x-6 opacity-10 text-[7px] sigma-font tracking-[0.2em]">
+                <span>PATNA</span>
+                <span>•</span>
+                <span>EST 2024</span>
+                <span>•</span>
+                <span>SIGMA</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
+
+```
